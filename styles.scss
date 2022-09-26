@@ -1,0 +1,309 @@
+$Pink: hsl(322, 100%, 66%);
+$LightPink: hsl(321, 100%, 78%);
+$LightRed: hsl(0, 100%, 63%);
+$VeryDarkCyan: hsl(192, 100%, 9%);
+$VeryPaleBlue: hsl(207, 100%, 98%);
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding: 20px 25px 0px 25px;
+    @font-face {
+        font-family: 'Poppings';
+        src: url(https://fonts.google.com/specimen/Poppins);
+    }
+
+    img{
+        width: 150px;
+    }
+
+    button{
+        width: 90px;
+        background-color: transparent;
+        padding:5px 10px ;
+        color: $Pink;
+        border: $LightPink solid 1px;
+        border-radius: 1em;
+    }
+}
+
+@mixin btn {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    width:220px;
+    padding: 13px 25px;
+    border-radius: 2em;
+    background-color: $Pink;
+    color: $VeryPaleBlue;
+    border: none;
+}
+
+.header{
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    
+    h1{
+        padding-top: 100px;
+        font-weight: 700;
+        font-family:Poppings;
+        font-size: 50px;
+    }
+
+    p{
+        width: 480px;
+        display: grid;
+        justify-content: center;
+        margin: auto;
+        font-size: 18px;
+        padding-bottom: 25px;
+        color: $VeryDarkCyan;
+    }
+    button{
+       @include btn;
+    }
+}
+
+.screen{
+
+    width: 800px;
+    height: 500px;
+    display: block;
+    justify-content: center;
+    margin: auto;
+    padding-top: 55px;
+}
+
+.communities{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    width: 700px;
+
+}
+@mixin icons {
+    img{
+        width: 35px;
+        margin: 0;
+    }
+    h1{
+        font-weight: 700;
+        font-size: 50px;
+        margin: 0;
+    }
+    p{
+        color: $VeryDarkCyan;
+        font-size: 18px;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.firsticon{
+    @include icons
+}
+.secondicon{
+    @include icons
+}
+
+@mixin backgroundPage {
+    .top{
+
+        display: flex;
+        height: 150px;
+        width: 100%;
+    }
+    .bottom{
+        position: relative;
+        height: 150px;
+        margin: 0;
+        width: 100%;
+        transform: rotatex(180deg);
+    }
+}
+.growTogether{
+   @include backgroundPage
+    
+}
+
+@mixin page {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+        width:450px;
+        font-size: 18px;
+    }
+    img{
+        max-width:500px;
+    }
+}
+.secondPage{
+    @include page;
+    background-color:$VeryPaleBlue;
+    p{
+        padding-left: 100px;
+    }
+    h1{
+        padding-left:100px;
+    }
+    img{
+        padding-right: 100px
+    }
+}
+
+.thirdPage{
+    @include page;
+    p{
+        padding-right: 100px;
+    }
+    h1{
+        padding-right:100px;
+    }
+    img{
+        padding-left: 100px
+    }
+}
+    
+.users{
+    @include backgroundPage
+}
+.fourthPage{
+    @include page;
+    background-color:$VeryPaleBlue;
+    p{
+        padding-left: 100px;
+    }
+    h1{
+        padding-left:100px;
+    }
+    img{
+        padding-right: 100px
+    }
+}
+
+.build{
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    padding:150px 0  ;
+    button{
+        @include btn;
+    }
+}
+.footerImg{
+    margin-bottom: 0;
+    width: 100%;
+    border: none;
+}
+footer{
+    display: grid;
+    
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: $VeryDarkCyan;
+    margin-top: 0;
+    color: white;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    .socials{
+        padding: 0 0 30px 90px ;
+        width: 350px;
+        
+    }
+}
+@mixin phone {
+    display: flex;
+    color: white;
+    align-items: center;
+    img{
+        width: 20px;
+        height: 20px;
+        padding:0 10px 0 0 ;
+    }
+}
+
+.phone{
+    padding: 0;
+    margin: 0;
+    @include phone
+}
+.email{
+    @include phone
+}
+.huddle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    img{
+        width:2rem;
+        height: 1.5rem;
+        padding: 0;
+        margin: 0;
+        background-color: black;
+    }
+    h1{
+        padding: 0;
+        margin: 0;
+        
+    }
+}
+
+.socialIcons{
+    padding-top: 4rem;
+    padding-right: 0;
+
+    i{
+        padding-right: 1rem;
+    }
+}
+
+.letter{
+    display:flex;
+    padding: 0 90px 0 0;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    align-items: flex-end;
+
+    button{
+        margin: auto;
+        width:120px;
+        padding: 10px 15px;
+        border-radius: .5em;
+        background-color: $Pink;
+        color: $VeryPaleBlue;
+        border: none;
+        }
+}
+
+.newsletter{
+    display: grid;
+    justify-content: space-around;
+    width: 350px;
+    h1{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    p{
+        padding-bottom: 2.5rem;
+        width: 350px;
+    }
+
+    input{
+        padding: 0.5rem;
+        margin-right: 0.5rem;
+    }
+   
+}
